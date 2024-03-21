@@ -15,7 +15,7 @@ client and server.
 is sufficient to declare call-by-value or call-by-reference semantics. 
 - Calls are fully transparent for both the server and the client. Neither end has to know that the operation happens on a remote instance.
 - Full support for bidirectional communication. Event callbacks are supported as well as callbacks using interfaces. There is no limit
-to the number of simultanously active calls in either direction.
+to the number of simultaneously active calls in either direction.
 - Support for multiple clients and multiple servers within the same application.
 - Transparent reference support. Clients can take references to objects that lie on any system within the distributed application.
 - Automatic self-distribution of processes across several computers in a network
@@ -31,7 +31,7 @@ to the number of simultanously active calls in either direction.
 # Limitations
 - It is recommended that client and server execute the same code base, because internally, binary serialization is used for performance reasons.
 The library and the application using it can distribute itself to arbitrary computers in the network.
-- The classes involved in call-by-reference semantics are bound to some limiations. Call-by-reference works only on virtual methods or through interfaces. 
+- The classes involved in call-by-reference semantics are bound to some limitations. Call-by-reference works only on virtual methods or through interfaces. 
 (Background: Internally, https://github.com/castleproject/Core is used to create the remoting proxies. Proxies can only be added to virtual methods or as interfaces)
 - While the communication link may be encrypted, full trust between server and client is required. Either end can - by design - execute
 arbitrary code on the other side.
